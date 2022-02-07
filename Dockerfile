@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.14
 
 ENV LANG='en_US.UTF-8' \
     LANGUAGE='en_US:en' \
@@ -7,9 +7,9 @@ ENV LANG='en_US.UTF-8' \
 #
 # SonarQube setup
 #
-ARG PLUGIN_VERSION=1.9.0
+ARG PLUGIN_VERSION=1.10.0
 ENV PLUGIN_VERSION=${PLUGIN_VERSION}
-ARG SONARQUBE_VERSION=9.1.0.47736
+ARG SONARQUBE_VERSION=9.3.0.51899
 ARG SONARQUBE_ZIP_URL=https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-${SONARQUBE_VERSION}.zip
 ENV JAVA_HOME='/usr/lib/jvm/java-11-openjdk' \
     PATH="/opt/java/openjdk/bin:$PATH" \
